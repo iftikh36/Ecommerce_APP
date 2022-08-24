@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/home_page.dart';
+import 'package:flutter_application_1/pages/login_pages.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    int days = 30;
-    String name = "Codepur";
-
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("Welcome to $days days of flutter by $name"),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    )));
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark,),
+      routes:{
+        "/":(context) => LoginPage(),
+        "/home":((context) => HomePage()),
+        "/login":((context) => LoginPage())
+      }
+    );
   }
-}
+  }
