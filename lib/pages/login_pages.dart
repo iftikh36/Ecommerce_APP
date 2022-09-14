@@ -50,9 +50,9 @@ class LoginPage extends StatelessWidget {
              onPressed: (){
               print("Hi IFTIKHAR");
              }
-         )),
-       )
-      ],
-    ));
+         ),
+      ])
+       ),
+    ]));
   }
 }
