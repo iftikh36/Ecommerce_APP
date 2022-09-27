@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child: Text("Welcome to $days days of flutter by name"),
+          child: Text(context.runtimeType.toString()),
         ), // This trailing comma makes auto-formatting nicer for build methods.
       ),
       drawer: MyDrawer(),
